@@ -9,7 +9,7 @@ const getBaseUrl = () => {
   
   // In Release builds, scriptURL is 'assets://index.android.bundle'
   // We must explicitly check for this and use the fallback IP.
-  let host = '192.168.100.90';
+  let host = '192.168.1.22';
   
   if (scriptURL.startsWith('http')) {
     host = scriptURL.split('://')[1]?.split('/')[0]?.split(':')[0] || host;
