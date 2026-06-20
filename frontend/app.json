@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "OilFund",
+    "slug": "oilfund-frontend",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.oecs.oilfund"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fbc2d2dc-5f12-4ae5-ab3b-bb96fbf7be0b"
+      }
+    }
+  }
+}
