@@ -6,7 +6,15 @@ import { useAppStore } from '../store/useAppStore';
 // Dynamically extract the host Mac's IP address from the Metro bundler script URL
 const getBaseUrl = () => {
   const scriptURL = NativeModules.SourceCode?.scriptURL || '';
-  const host = scriptURL.split('://')[1]?.split('/')[0]?.split(':')[0] || '192.168.100.90';
+  
+  // In Release builds, scriptURL is 'assets://index.android.bundle'
+  // We must explicitly check for this and use the fallback IP.
+  let host = '192.168.100.90';
+  
+  if (scriptURL.startsWith('http')) {
+    host = scriptURL.split('://')[1]?.split('/')[0]?.split(':')[0] || host;
+  }
+  
   const url = `http://${host}:3000/api`;
   console.log("[API Service] Resolved Base URL for requests:", url);
   return url;
