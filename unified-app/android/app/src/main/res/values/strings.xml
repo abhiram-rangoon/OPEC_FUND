@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">OPEC OilFund</string>
+    <string name="title_activity_main">OPEC OilFund</string>
+    <string name="package_name">com.opec.oilfund</string>
+    <string name="custom_url_scheme">com.opec.oilfund</string>
+</resources>
